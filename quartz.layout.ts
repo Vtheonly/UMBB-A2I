@@ -43,38 +43,38 @@ export const defaultContentPageLayout: PageLayout = {
   right: [
     // In quartz.layout.ts, inside the 'right:' array
 
+    // in quartz.layout.ts
     Component.Graph({
       localGraph: {
-        // BEHAVIORAL properties are VALID and should stay
+        // Increase repel force to prevent nodes from overlapping as much
+        repelForce: 0.8,
+        // Increase the default link distance to give nodes more breathing room
+        linkDistance: 50,
+        // Lower the centering force to allow the graph to spread out more
+        centerForce: 0.2,
+        // Increase the number of connection hops to show for a richer local view
+        depth: 2,
+        // Other settings
         drag: true,
         zoom: true,
-        depth: 1,
         scale: 1.1,
-        repelForce: 0.7,
-        centerForce: 0.3,
-        linkDistance: 30,
         fontSize: 0.6,
         opacityScale: 3,
-        showTags: false, // Set to false for a cleaner look, or true if you want them
+        showTags: true,
         focusOnHover: true,
-
-        // REMOVE ALL COLOR PROPERTIES FROM HERE
       },
       globalGraph: {
-        // BEHAVIORAL properties are VALID and should stay
+        repelForce: 0.8,
+        linkDistance: 50,
+        centerForce: 0.2,
+        depth: -1, // Show all nodes in global view
         drag: true,
         zoom: true,
-        depth: -1,
         scale: 0.9,
-        repelForce: 0.8,
-        centerForce: 0.3,
-        linkDistance: 30,
         fontSize: 0.6,
         opacityScale: 1,
-        showTags: false,
+        showTags: true,
         focusOnHover: true,
-
-        // REMOVE ALL COLOR PROPERTIES FROM HERE
       },
     }),
     Component.DesktopOnly(Component.TableOfContents()),

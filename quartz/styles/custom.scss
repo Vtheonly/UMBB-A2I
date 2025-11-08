@@ -94,3 +94,87 @@
   fill: var(--dark); // Make text brighter on hover
   cursor: pointer;
 }
+
+
+
+/* === ADVANCED GRAPH STYLES === */
+
+.graph-container {
+  // Make the graph background slightly different from the page
+  // In dark mode, this creates a nice "panel" effect
+  .dark & {
+    background-color: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+    border: 1px solid var(--lightgray);
+    padding: 0.5rem;
+  }
+}
+
+// Style for the nodes (the circles)
+.graph-container .graph-node > circle {
+  stroke-width: 1px;
+  transition: all 0.2s ease-in-out;
+
+  // Style for the currently active page's node
+  &.active {
+    stroke: var(--tertiary);
+    stroke-width: 2px;
+    
+    // Add a pulsing glow animation to the active node
+    animation: pulse 2s infinite;
+  }
+}
+
+// Style for the links (the lines)
+.graph-container .graph-link {
+  stroke-opacity: 0.6;
+  transition: all 0.2s ease-in-out;
+}
+
+// --- Interactivity ---
+
+// When hovering over a node...
+.graph-container .graph-node:hover {
+  cursor: pointer;
+
+  // Make the circle larger and brighter
+  > circle {
+    transform: scale(1.5);
+    stroke: var(--tertiary);
+    fill: var(--tertiary) !important; // Use important to override inline styles
+  }
+
+  // Make the text bold and easier to read
+  > text {
+    font-weight: 600;
+    fill: var(--dark) !important;
+  }
+}
+
+// When hovering over a node, fade out non-connected elements
+.graph-container:has(.graph-node:hover) .graph-node:not(:hover) {
+  opacity: 0.2;
+}
+.graph-container:has(.graph-node:hover) .graph-link:not(:hover) {
+  opacity: 0.1;
+}
+
+
+// --- Animations ---
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(var(--tertiary-rgb), 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(var(--tertiary-rgb), 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(var(--tertiary-rgb), 0);
+  }
+}
+
+// You might need to add this to your main theme colors in quartz.config.ts
+// to make the pulse animation work. For example:
+// tertiary: "#84a59d",
+// tertiary-rgb: "132, 165, 157",
