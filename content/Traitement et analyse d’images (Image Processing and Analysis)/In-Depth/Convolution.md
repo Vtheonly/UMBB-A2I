@@ -1,6 +1,15 @@
+
+> [!info] Status
+> **Status:** Complete
+
 # In-Depth: Image Convolution
 
 This note provides a detailed explanation of image convolution, a fundamental operation in image processing used for applying filters to images.
+
+## Referenced In
+- [[../02 Image Preprocessing and Filtering/2.1 Spatial Domain vs Frequency Domain|Spatial vs Frequency Domain]]
+- [[../02 Image Preprocessing and Filtering/2.2 Linear Spatial Filters (Mean, Gaussian)|Linear Spatial Filters]]
+- [[../02 Image Preprocessing and Filtering/2.3 Non-Linear Spatial Filters (Median, Nagao)|Non-Linear Spatial Filters]]
 
 ## Core Concept
 
@@ -58,3 +67,16 @@ When the kernel is positioned over pixels at the edge of the image, part of the 
 1.  **Do Not Filter Borders (Cropping):** The simplest method is to not calculate new values for the border pixels. The output image will be slightly smaller than the input.
 2.  **Padding with Zeros:** The input image is extended by adding a border of black pixels (value 0). This allows the kernel to operate on all original pixels but can introduce a dark edge artifact.
 3.  **Mirror Padding (Reflection):** The border is extended by reflecting the pixel values from within the image. This is often a more effective method as it maintains a more natural transition at the edges and reduces artifacts.
+
+## Keywords
+
+| Keyword                 | Description                                                                                             |
+| ----------------------- | ------------------------------------------------------------------------------------------------------- |
+| [[Convolution]]         | The mathematical operation of sliding a kernel over an image to apply a filter.                         |
+| [[Kernel]]              | A small matrix of weights that defines the filter's effect.                                             |
+| [[Spatial Filtering]]   | Filtering operations that work directly on the pixel grid.                                              |
+| [[Padding]]             | The process of handling image borders during convolution (e.g., zero-padding, mirror padding).          |
+| [[Separable Filter]]    | A 2D filter that can be optimized by decomposing it into two 1D filters.                                |
+
+---
+tags: #in-depth #convolution #kernel #spatial-filtering
