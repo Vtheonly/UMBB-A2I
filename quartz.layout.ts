@@ -9,7 +9,7 @@ export const sharedPageComponents: SharedLayout = {
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/Vtheonly",
-      "Linkedin": "https://www.linkedin.com/in/mersel-fares-baa8aa268/",
+      Linkedin: "https://www.linkedin.com/in/mersel-fares-baa8aa268/",
     },
   }),
 }
@@ -41,7 +41,42 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Explorer(),
   ],
   right: [
-    Component.Graph(),
+    // In quartz.layout.ts, inside the 'right:' array
+
+    Component.Graph({
+      localGraph: {
+        // BEHAVIORAL properties are VALID and should stay
+        drag: true,
+        zoom: true,
+        depth: 1,
+        scale: 1.1,
+        repelForce: 0.7,
+        centerForce: 0.3,
+        linkDistance: 30,
+        fontSize: 0.6,
+        opacityScale: 3,
+        showTags: false, // Set to false for a cleaner look, or true if you want them
+        focusOnHover: true,
+
+        // REMOVE ALL COLOR PROPERTIES FROM HERE
+      },
+      globalGraph: {
+        // BEHAVIORAL properties are VALID and should stay
+        drag: true,
+        zoom: true,
+        depth: -1,
+        scale: 0.9,
+        repelForce: 0.8,
+        centerForce: 0.3,
+        linkDistance: 30,
+        fontSize: 0.6,
+        opacityScale: 1,
+        showTags: false,
+        focusOnHover: true,
+
+        // REMOVE ALL COLOR PROPERTIES FROM HERE
+      },
+    }),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],

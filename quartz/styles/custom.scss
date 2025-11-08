@@ -1,3 +1,96 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+
+/* A subtle background gradient for dark mode */
+.dark body {
+  background: linear-gradient(to bottom right, #282a36, #1d1e26);
+  background-attachment: fixed;
+}
+
+/* Make blockquotes look awesome */
+.dark blockquote {
+  border-left: 3px solid var(--tertiary); /* Uses the green from our theme */
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 1rem;
+  border-radius: 5px;
+  font-style: italic;
+  color: var(--darkgray);
+}
+
+/* Style links with a cool underline effect */
+.page-listing a.internal,
+.content a.internal {
+  text-decoration: none;
+  background-image: linear-gradient(var(--secondary), var(--secondary));
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size 0.3s;
+}
+
+.page-listing a.internal:hover,
+.content a.internal:hover {
+  background-size: 100% 2px;
+}
+
+/* Add a fade-in animation to the page content */
+.popover-hint, .page .page-header, .page .page-content {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+
+/*
+===========================================
+  COOL GRAPH STYLES
+===========================================
+*/
+
+/* We'll use the Dracula theme colors we defined in quartz.config.ts */
+/* You can change these to any valid CSS color. */
+
+.dark .graph-container {
+  // Link color (Purple links)
+  --graph-link: var(--secondary);
+
+  // Default node color (Green nodes)
+  --graph-node: var(--tertiary);
+
+  // Text color
+  --graph-text: var(--darkgray);
+  
+  // Node color when it's the current page
+  --graph-node-active: var(--secondary);
+}
+
+.light .graph-container {
+  // Link color (Pink links)
+  --graph-link: var(--secondary);
+
+  // Default node color (Cyan nodes)
+  --graph-node: var(--tertiary);
+  
+  // Text color
+  --graph-text: var(--darkgray);
+  
+  // Node color when it's the current page
+  --graph-node-active: var(--secondary);
+}
+
+// Style for what happens when you hover over a node
+.graph-container .graph-node:hover > circle {
+  fill: var(--tertiary); // Make node circle green on hover in dark mode
+  cursor: pointer;
+}
+.graph-container .graph-node:hover > text {
+  fill: var(--dark); // Make text brighter on hover
+  cursor: pointer;
+}

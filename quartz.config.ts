@@ -23,32 +23,34 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
-        code: "IBM Plex Mono",
+        header: "Roboto Slab", // A strong, modern header font
+        body: "Inter", // A very clean and readable body font
+        code: "JetBrains Mono", // One of the best coding fonts
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#fff23688",
+          // Dracula Light (hypothetical)
+          light: "#f8f8f2", // Background
+          lightgray: "#e3e3e0", // Borders
+          gray: "#8e8e8e", // Medium text
+          darkgray: "#44475a", // Body text
+          dark: "#282a36", // Headings
+          secondary: "#ff79c6", // Links (Pink)
+          tertiary: "#8be9fd", // Metadata, special text (Cyan)
+          highlight: "rgba(255, 121, 198, 0.15)", // Highlight background
+          textHighlight: "#00000000",
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
-          dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#b3aa0288",
+          // Classic Dracula Theme
+          light: "#282a36", // Background
+          lightgray: "#44475a", // Component backgrounds
+          gray: "#94a3b8", // Medium text
+          darkgray: "#e2e8f0", // Body text
+          dark: "#f8f8f2", // Headings
+          secondary: "#bd93f9", // Links (Purple)
+          tertiary: "#50fa7b", // Metadata, special text (Green)
+          highlight: "rgba(189, 147, 249, 0.15)", // Highlight background
+          textHighlight: "#00000000",
         },
       },
     },
