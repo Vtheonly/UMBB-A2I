@@ -1,9 +1,4 @@
 
-
-# Course Objectives: Image Processing and Analysis
-
-This note outlines the primary learning goals and required prerequisites for the course on Image Processing and Analysis.
-
 ## Primary Goal
 
 The main objective of this course is to provide students with the foundational knowledge required to master the end-to-end pipeline of digital image processing and analysis. Students will learn to apply specific techniques and algorithms relevant to a broad range of applications in computer vision and artificial intelligence.

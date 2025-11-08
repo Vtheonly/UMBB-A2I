@@ -1,9 +1,4 @@
 
-
-# Course Plan
-
-This document outlines the sequential structure of the course, organized into five main chapters. Each chapter builds upon the previous one, following a logical progression from fundamental concepts to advanced analysis techniques.
-
 ## Course Modules
 
 1.  **Chapter 1: Definitions and Basic Concepts of Imaging**
