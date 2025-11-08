@@ -1,12 +1,9 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "public" }
-    }
-  ],
-  "buildCommand": "npx quartz build",
-  "outputDirectory": "public"
+  "name": "my-quartz-site",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "quartz dev",
+    "build": "quartz build",
+    "vercel-build": "npx quartz build"
+  }
 }
