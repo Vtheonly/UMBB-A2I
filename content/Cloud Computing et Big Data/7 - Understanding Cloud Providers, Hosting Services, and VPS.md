@@ -5,12 +5,12 @@
 
 You asked:
 
-> What’s the difference between a **hosting service** and a **cloud provider**?  
-> What does it mean when someone says _“a cloud provider gives resources while a hosting service gives services”_?  
-> What exactly does each one give you?  
-> To what level of access do you have control?  
-> Does a cloud provider just give you a file explorer or terminal?  
-> And is a **cloud** basically just a **VPS**?
+ What’s the difference between a **hosting service** and a **cloud provider**?  
+ What does it mean when someone says _“a cloud provider gives resources while a hosting service gives services”_?  
+ What exactly does each one give you?  
+ To what level of access do you have control?  
+ Does a cloud provider just give you a file explorer or terminal?  
+ And is a **cloud** basically just a **VPS**?
 
 This note answers all of that step by step.
 
@@ -167,8 +167,8 @@ You can get a VPS from:
 
 ### **In Short**
 
-> A **VPS** is like renting one virtual computer.  
-> A **Cloud Provider** gives you an entire virtual data center.
+ A **VPS** is like renting one virtual computer.  
+ A **Cloud Provider** gives you an entire virtual data center.
 
 ---
 
