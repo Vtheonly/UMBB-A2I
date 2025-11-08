@@ -1,3 +1,9 @@
+---
+title: Pixel Relationships and Distance
+slug: 01-Introduction-to-Digital-Images/1.6-Pixel-Relationships-and-Distance
+---
+
+
 # Course Plan
 
 This document outlines the sequential structure of the course, organized into five main chapters. Each chapter builds upon the previous one, following a logical progression from fundamental concepts to advanced analysis techniques.
