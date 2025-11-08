@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>UMBB A2I</title>
+      <link>https://quartz.jzhao.xyz</link>
+      <description>Last 10 notes on UMBB A2I</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>Pixel Relationships and Distance</title>
+    <link>https://quartz.jzhao.xyz/02-Image-Preprocessing-and-Filtering/2.4-Frequency-Domain-Filtering</link>
+    <guid>https://quartz.jzhao.xyz/02-Image-Preprocessing-and-Filtering/2.4-Frequency-Domain-Filtering</guid>
+    <description><![CDATA[ Core Concept Instead of operating on pixel neighborhoods, frequency domain filtering works by modifying the coefficients of the image’s constituent frequencies. ]]></description>
+    <pubDate>Sat, 08 Nov 2025 03:20:28 GMT</pubDate>
+  </item><item>
+    <title>Pixel Relationships and Distance</title>
+    <link>https://quartz.jzhao.xyz/00-Course-Overview/Course-Objectives</link>
+    <guid>https://quartz.jzhao.xyz/00-Course-Overview/Course-Objectives</guid>
+    <description><![CDATA[ Course Objectives: Image Processing and Analysis This note outlines the primary learning goals and required prerequisites for the course on Image Processing and Analysis. ]]></description>
+    <pubDate>Sat, 08 Nov 2025 03:20:08 GMT</pubDate>
+  </item><item>
+    <title>Pixel Relationships and Distance</title>
+    <link>https://quartz.jzhao.xyz/00-Course-Overview/Course-Plan</link>
+    <guid>https://quartz.jzhao.xyz/00-Course-Overview/Course-Plan</guid>
+    <description><![CDATA[ Course Plan This document outlines the sequential structure of the course, organized into five main chapters. ]]></description>
+    <pubDate>Sat, 08 Nov 2025 03:20:08 GMT</pubDate>
+  </item><item>
+    <title>Pixel Relationships and Distance</title>
+    <link>https://quartz.jzhao.xyz/01-Introduction-to-Digital-Images/1.0-What-is-a-Digital-Image</link>
+    <guid>https://quartz.jzhao.xyz/01-Introduction-to-Digital-Images/1.0-What-is-a-Digital-Image</guid>
+    <description><![CDATA[ What is a Digital Image? This note defines the concept of a digital image, components, and its representation for computer processing. ]]></description>
+    <pubDate>Sat, 08 Nov 2025 03:20:08 GMT</pubDate>
+  </item><item>
+    <title>Pixel Relationships and Distance</title>
+    <link>https://quartz.jzhao.xyz/01-Introduction-to-Digital-Images/1.1-Image-Representation-(Bitmap-vs-Vector)</link>
+    <guid>https://quartz.jzhao.xyz/01-Introduction-to-Digital-Images/1.1-Image-Representation-(Bitmap-vs-Vector)</guid>
+    <description><![CDATA[ Image Representation: Bitmap vs. Vector This note clarifies the two primary methods for digitally representing images: bitmap (or raster) and vector. ]]></description>
+    <pubDate>Sat, 08 Nov 2025 03:20:08 GMT</pubDate>
+  </item><item>
+    <title>Pixel Relationships and Distance</title>
+    <link>https://quartz.jzhao.xyz/01-Introduction-to-Digital-Images/1.2-Resolution-and-Color-Depth</link>
+    <guid>https://quartz.jzhao.xyz/01-Introduction-to-Digital-Images/1.2-Resolution-and-Color-Depth</guid>
+    <description><![CDATA[ Image Resolution and Color Depth This note explains the two key variables that characterize a bitmap image: spatial resolution and color depth. ]]></description>
+    <pubDate>Sat, 08 Nov 2025 03:20:08 GMT</pubDate>
+  </item><item>
+    <title>Pixel Relationships and Distance</title>
+    <link>https://quartz.jzhao.xyz/01-Introduction-to-Digital-Images/1.3-Color-Spaces-(RGB,-Grayscale,-HSL)</link>
+    <guid>https://quartz.jzhao.xyz/01-Introduction-to-Digital-Images/1.3-Color-Spaces-(RGB,-Grayscale,-HSL)</guid>
+    <description><![CDATA[ Color Spaces A color space, or color model, is an abstract mathematical model that describes how colors can be represented as tuples of numbers. ]]></description>
+    <pubDate>Sat, 08 Nov 2025 03:20:08 GMT</pubDate>
+  </item><item>
+    <title>Pixel Relationships and Distance</title>
+    <link>https://quartz.jzhao.xyz/01-Introduction-to-Digital-Images/1.4-Image-Formats-(JPG,-PNG,-DICOM)</link>
+    <guid>https://quartz.jzhao.xyz/01-Introduction-to-Digital-Images/1.4-Image-Formats-(JPG,-PNG,-DICOM)</guid>
+    <description><![CDATA[ Common Image Formats This note describes several common image file formats and their primary use cases. ]]></description>
+    <pubDate>Sat, 08 Nov 2025 03:20:08 GMT</pubDate>
+  </item><item>
+    <title>Pixel Relationships and Distance</title>
+    <link>https://quartz.jzhao.xyz/01-Introduction-to-Digital-Images/1.5-The-Image-Histogram</link>
+    <guid>https://quartz.jzhao.xyz/01-Introduction-to-Digital-Images/1.5-The-Image-Histogram</guid>
+    <description><![CDATA[ The Image Histogram This note explains the concept of an image histogram, its construction, and its utility in image analysis and processing. ]]></description>
+    <pubDate>Sat, 08 Nov 2025 03:20:08 GMT</pubDate>
+  </item><item>
+    <title>Pixel Relationships and Distance</title>
+    <link>https://quartz.jzhao.xyz/01-Introduction-to-Digital-Images/1.6-Pixel-Relationships-and-Distance</link>
+    <guid>https://quartz.jzhao.xyz/01-Introduction-to-Digital-Images/1.6-Pixel-Relationships-and-Distance</guid>
+    <description><![CDATA[ This note explains how individual pixels relate to one another in terms of their spatial arrangement. ]]></description>
+    <pubDate>Sat, 08 Nov 2025 03:20:08 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>
