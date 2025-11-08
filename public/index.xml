@@ -2,69 +2,69 @@
 <rss version="2.0">
     <channel>
       <title>UMBB A2I</title>
-      <link>https://quartz.jzhao.xyz</link>
+      <link>https://</link>
       <description>Last 10 notes on UMBB A2I</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Pixel Relationships and Distance</title>
-    <link>https://quartz.jzhao.xyz/01-Introduction-to-Digital-Images/1.0-What-is-a-Digital-Image</link>
-    <guid>https://quartz.jzhao.xyz/01-Introduction-to-Digital-Images/1.0-What-is-a-Digital-Image</guid>
-    <description><![CDATA[ What is a Digital Image? This note defines the concept of a digital image, components, and its representation for computer processing. ]]></description>
-    <pubDate>Sat, 08 Nov 2025 03:41:42 GMT</pubDate>
+    <title>7 - Understanding Cloud Providers, Hosting Services, and VPS</title>
+    <link>https://Cloud-Computing-et-Big-Data/7---Understanding-Cloud-Providers,-Hosting-Services,-and-VPS</link>
+    <guid>https://Cloud-Computing-et-Big-Data/7---Understanding-Cloud-Providers,-Hosting-Services,-and-VPS</guid>
+    <description><![CDATA[ Clarifying the Question You asked: What’s the difference between a hosting service and a cloud provider? What does it mean when someone says “a cloud provider gives resources while a hosting service gives services”? What exactly does each one give you? To what level of access do you have control? Do... ]]></description>
+    <pubDate>Sat, 08 Nov 2025 05:16:52 GMT</pubDate>
   </item><item>
-    <title>Pixel Relationships and Distance</title>
-    <link>https://quartz.jzhao.xyz/02-Image-Preprocessing-and-Filtering/2.4-Frequency-Domain-Filtering</link>
-    <guid>https://quartz.jzhao.xyz/02-Image-Preprocessing-and-Filtering/2.4-Frequency-Domain-Filtering</guid>
-    <description><![CDATA[ Core Concept Instead of operating on pixel neighborhoods, frequency domain filtering works by modifying the coefficients of the image’s constituent frequencies. ]]></description>
-    <pubDate>Sat, 08 Nov 2025 03:20:28 GMT</pubDate>
+    <title>Chapter 0 Installation</title>
+    <link>https://Apprentissage-automatique-(Machine-Learning)/Chapter-0-Installation</link>
+    <guid>https://Apprentissage-automatique-(Machine-Learning)/Chapter-0-Installation</guid>
+    <description><![CDATA[ Let’s go step by step to connect your virtual environment (venv) to PyCharm, Jupyter Notebook, and install your core Python libraries (matplotlib, pandas, numpy). ]]></description>
+    <pubDate>Sat, 08 Nov 2025 05:10:48 GMT</pubDate>
   </item><item>
-    <title>Pixel Relationships and Distance</title>
-    <link>https://quartz.jzhao.xyz/00-Course-Overview/Course-Objectives</link>
-    <guid>https://quartz.jzhao.xyz/00-Course-Overview/Course-Objectives</guid>
-    <description><![CDATA[ Course Objectives: Image Processing and Analysis This note outlines the primary learning goals and required prerequisites for the course on Image Processing and Analysis. ]]></description>
-    <pubDate>Sat, 08 Nov 2025 03:20:08 GMT</pubDate>
+    <title>10.1. Sampling Methods (MCMC, Gibbs Sampling)</title>
+    <link>https://Apprentissage-automatique-(Machine-Learning)/Chapter-10:-Advanced-Topics/10.1.-Sampling-Methods-(MCMC,-Gibbs-Sampling)</link>
+    <guid>https://Apprentissage-automatique-(Machine-Learning)/Chapter-10:-Advanced-Topics/10.1.-Sampling-Methods-(MCMC,-Gibbs-Sampling)</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Sat, 08 Nov 2025 05:10:48 GMT</pubDate>
   </item><item>
-    <title>Pixel Relationships and Distance</title>
-    <link>https://quartz.jzhao.xyz/00-Course-Overview/Course-Plan</link>
-    <guid>https://quartz.jzhao.xyz/00-Course-Overview/Course-Plan</guid>
-    <description><![CDATA[ Course Plan This document outlines the sequential structure of the course, organized into five main chapters. ]]></description>
-    <pubDate>Sat, 08 Nov 2025 03:20:08 GMT</pubDate>
+    <title>10.2. Appendix: Eigen-decomposition</title>
+    <link>https://Apprentissage-automatique-(Machine-Learning)/Chapter-10:-Advanced-Topics/10.2.-Appendix:-Eigen-decomposition</link>
+    <guid>https://Apprentissage-automatique-(Machine-Learning)/Chapter-10:-Advanced-Topics/10.2.-Appendix:-Eigen-decomposition</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Sat, 08 Nov 2025 05:10:48 GMT</pubDate>
   </item><item>
-    <title>Pixel Relationships and Distance</title>
-    <link>https://quartz.jzhao.xyz/01-Introduction-to-Digital-Images/1.1-Image-Representation-(Bitmap-vs-Vector)</link>
-    <guid>https://quartz.jzhao.xyz/01-Introduction-to-Digital-Images/1.1-Image-Representation-(Bitmap-vs-Vector)</guid>
-    <description><![CDATA[ Image Representation: Bitmap vs. Vector This note clarifies the two primary methods for digitally representing images: bitmap (or raster) and vector. ]]></description>
-    <pubDate>Sat, 08 Nov 2025 03:20:08 GMT</pubDate>
+    <title>1.1. Motivation &amp; Core Concepts</title>
+    <link>https://Apprentissage-automatique-(Machine-Learning)/Chapter-1:-Foundations-of-Machine-Learning/1.1.-Motivation--and--Core-Concepts</link>
+    <guid>https://Apprentissage-automatique-(Machine-Learning)/Chapter-1:-Foundations-of-Machine-Learning/1.1.-Motivation--and--Core-Concepts</guid>
+    <description><![CDATA[ Of course. Here are all the notes for the first chapter, “Foundations of Machine Learning,” structured for your Obsidian vault. ]]></description>
+    <pubDate>Sat, 08 Nov 2025 05:10:48 GMT</pubDate>
   </item><item>
-    <title>Pixel Relationships and Distance</title>
-    <link>https://quartz.jzhao.xyz/01-Introduction-to-Digital-Images/1.2-Resolution-and-Color-Depth</link>
-    <guid>https://quartz.jzhao.xyz/01-Introduction-to-Digital-Images/1.2-Resolution-and-Color-Depth</guid>
-    <description><![CDATA[ Image Resolution and Color Depth This note explains the two key variables that characterize a bitmap image: spatial resolution and color depth. ]]></description>
-    <pubDate>Sat, 08 Nov 2025 03:20:08 GMT</pubDate>
+    <title>1.2. Fundamental Terminology &amp; Notation</title>
+    <link>https://Apprentissage-automatique-(Machine-Learning)/Chapter-1:-Foundations-of-Machine-Learning/1.2.-Fundamental-Terminology--and--Notation</link>
+    <guid>https://Apprentissage-automatique-(Machine-Learning)/Chapter-1:-Foundations-of-Machine-Learning/1.2.-Fundamental-Terminology--and--Notation</guid>
+    <description><![CDATA[ 1.2 Fundamental Terminology &amp; Notation Context To study machine learning effectively, it is essential to understand its core terminology and mathematical notation. ]]></description>
+    <pubDate>Sat, 08 Nov 2025 05:10:48 GMT</pubDate>
   </item><item>
-    <title>Pixel Relationships and Distance</title>
-    <link>https://quartz.jzhao.xyz/01-Introduction-to-Digital-Images/1.3-Color-Spaces-(RGB,-Grayscale,-HSL)</link>
-    <guid>https://quartz.jzhao.xyz/01-Introduction-to-Digital-Images/1.3-Color-Spaces-(RGB,-Grayscale,-HSL)</guid>
-    <description><![CDATA[ Color Spaces A color space, or color model, is an abstract mathematical model that describes how colors can be represented as tuples of numbers. ]]></description>
-    <pubDate>Sat, 08 Nov 2025 03:20:08 GMT</pubDate>
+    <title>1.3. Types of Machine Learning (Supervised, Unsupervised)</title>
+    <link>https://Apprentissage-automatique-(Machine-Learning)/Chapter-1:-Foundations-of-Machine-Learning/1.3.-Types-of-Machine-Learning-(Supervised,-Unsupervised)</link>
+    <guid>https://Apprentissage-automatique-(Machine-Learning)/Chapter-1:-Foundations-of-Machine-Learning/1.3.-Types-of-Machine-Learning-(Supervised,-Unsupervised)</guid>
+    <description><![CDATA[ 1.3 Types of Machine Learning Context Machine learning problems are categorized into several major types based on the nature of the data and the goal of the task. ]]></description>
+    <pubDate>Sat, 08 Nov 2025 05:10:48 GMT</pubDate>
   </item><item>
-    <title>Pixel Relationships and Distance</title>
-    <link>https://quartz.jzhao.xyz/01-Introduction-to-Digital-Images/1.4-Image-Formats-(JPG,-PNG,-DICOM)</link>
-    <guid>https://quartz.jzhao.xyz/01-Introduction-to-Digital-Images/1.4-Image-Formats-(JPG,-PNG,-DICOM)</guid>
-    <description><![CDATA[ Common Image Formats This note describes several common image file formats and their primary use cases. ]]></description>
-    <pubDate>Sat, 08 Nov 2025 03:20:08 GMT</pubDate>
+    <title>1.4. Core Challenges: Overfitting &amp; Underfitting</title>
+    <link>https://Apprentissage-automatique-(Machine-Learning)/Chapter-1:-Foundations-of-Machine-Learning/1.4.-Core-Challenges:-Overfitting--and--Underfitting</link>
+    <guid>https://Apprentissage-automatique-(Machine-Learning)/Chapter-1:-Foundations-of-Machine-Learning/1.4.-Core-Challenges:-Overfitting--and--Underfitting</guid>
+    <description><![CDATA[ 1.4 Core Challenges: Overfitting &amp; Underfitting Context A central challenge in machine learning is creating a model that not only performs well on the data it was trained on, but also generalizes to new, unseen data. ]]></description>
+    <pubDate>Sat, 08 Nov 2025 05:10:48 GMT</pubDate>
   </item><item>
-    <title>Pixel Relationships and Distance</title>
-    <link>https://quartz.jzhao.xyz/01-Introduction-to-Digital-Images/1.5-The-Image-Histogram</link>
-    <guid>https://quartz.jzhao.xyz/01-Introduction-to-Digital-Images/1.5-The-Image-Histogram</guid>
-    <description><![CDATA[ The Image Histogram This note explains the concept of an image histogram, its construction, and its utility in image analysis and processing. ]]></description>
-    <pubDate>Sat, 08 Nov 2025 03:20:08 GMT</pubDate>
+    <title>1.5. Controlling Capacity with Regularization</title>
+    <link>https://Apprentissage-automatique-(Machine-Learning)/Chapter-1:-Foundations-of-Machine-Learning/1.5.-Controlling-Capacity-with-Regularization</link>
+    <guid>https://Apprentissage-automatique-(Machine-Learning)/Chapter-1:-Foundations-of-Machine-Learning/1.5.-Controlling-Capacity-with-Regularization</guid>
+    <description><![CDATA[ 1.5 Controlling Capacity with Regularization Context While adjusting a model’s structural complexity (like the degree M of a polynomial) is one way to combat overfitting, it is often impractical. ]]></description>
+    <pubDate>Sat, 08 Nov 2025 05:10:48 GMT</pubDate>
   </item><item>
-    <title>Pixel Relationships and Distance</title>
-    <link>https://quartz.jzhao.xyz/01-Introduction-to-Digital-Images/1.6-Pixel-Relationships-and-Distance</link>
-    <guid>https://quartz.jzhao.xyz/01-Introduction-to-Digital-Images/1.6-Pixel-Relationships-and-Distance</guid>
-    <description><![CDATA[ This note explains how individual pixels relate to one another in terms of their spatial arrangement. ]]></description>
-    <pubDate>Sat, 08 Nov 2025 03:20:08 GMT</pubDate>
+    <title>1.6. The Curse of Dimensionality</title>
+    <link>https://Apprentissage-automatique-(Machine-Learning)/Chapter-1:-Foundations-of-Machine-Learning/1.6.-The-Curse-of-Dimensionality</link>
+    <guid>https://Apprentissage-automatique-(Machine-Learning)/Chapter-1:-Foundations-of-Machine-Learning/1.6.-The-Curse-of-Dimensionality</guid>
+    <description><![CDATA[ 1.6 The Curse of Dimensionality Context The “Curse of Dimensionality” refers to a set of problems that arise when working with data in high-dimensional spaces. ]]></description>
+    <pubDate>Sat, 08 Nov 2025 05:10:48 GMT</pubDate>
   </item>
     </channel>
   </rss>

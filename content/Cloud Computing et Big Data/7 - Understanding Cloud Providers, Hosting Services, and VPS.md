@@ -1,6 +1,4 @@
 
----
-
 ## **Clarifying the Question**
 
 You asked:
@@ -14,7 +12,11 @@ You asked:
 
 This note answers all of that step by step.
 
+
+
 ---
+
+
 
 ## **1. Hosting Service vs Cloud Provider**
 

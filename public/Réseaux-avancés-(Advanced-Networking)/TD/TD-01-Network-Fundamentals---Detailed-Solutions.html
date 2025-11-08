@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><title>TD 01 Network Fundamentals - Detailed Solutions</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="UMBB A2I"/><meta property="og:title" content="TD 01 Network Fundamentals - Detailed Solutions"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="TD 01 Network Fundamentals - Detailed Solutions"/><meta name="twitter:description" content="Exercise 01: MAC Addresses Problem: Given the following MAC addresses: a) 01-00-5E-AB-CD-EF b) 00-00-25-47-EF-CD c) 11-52-AB-9B-DC-12 d) 00-01-4B-B4-A2-EF Give the type of each MAC address."/><meta property="og:description" content="Exercise 01: MAC Addresses Problem: Given the following MAC addresses: a) 01-00-5E-AB-CD-EF b) 00-00-25-47-EF-CD c) 11-52-AB-9B-DC-12 d) 00-01-4B-B4-A2-EF Give the type of each MAC address."/><meta property="og:image:alt" content="Exercise 01: MAC Addresses Problem: Given the following MAC addresses: a) 01-00-5E-AB-CD-EF b) 00-00-25-47-EF-CD c) 11-52-AB-9B-DC-12 d) 00-01-4B-B4-A2-EF Give the type of each MAC address."/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="Exercise 01: MAC Addresses Problem: Given the following MAC addresses: a) 01-00-5E-AB-CD-EF b) 00-00-25-47-EF-CD c) 11-52-AB-9B-DC-12 d) 00-01-4B-B4-A2-EF Give the type of each MAC address."/><meta name="generator" content="Quartz"/><link href="../../index.css" rel="stylesheet" type="text/css" spa-preserve/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  padding: 2rem;
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvbWVyc2VsL0RvY3VtZW50cy9Qcm9qZWN0cy9VTUJCIEFJL215LXF1YXJ0ei1zaXRlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTs7QUFJRjtFQUNFO0VBQ0E7RUFDQSIsInNvdXJjZXNDb250ZW50IjpbIi5leHBhbmQtYnV0dG9uIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbG9hdDogcmlnaHQ7XG4gIHBhZGRpbmc6IDAuNHJlbTtcbiAgbWFyZ2luOiAwLjNyZW07XG4gIHJpZ2h0OiAwOyAvLyBOT1RFOiByaWdodCB3aWxsIGJlIHNldCBpbiBtZXJtYWlkLmlubGluZS50c1xuICBjb2xvcjogdmFyKC0tZ3JheSk7XG4gIGJvcmRlci1jb2xvcjogdmFyKC0tZGFyayk7XG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgYm9yZGVyOiAxcHggc29saWQ7XG4gIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgb3BhY2l0eTogMDtcbiAgdHJhbnNpdGlvbjogMC4ycztcblxuICAmID4gc3ZnIHtcbiAgICBmaWxsOiB2YXIoLS1saWdodCk7XG4gICAgZmlsdGVyOiBjb250cmFzdCgwLjMpO1xuICB9XG5cbiAgJjpob3ZlciB7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIGJvcmRlci1jb2xvcjogdmFyKC0tc2Vjb25kYXJ5KTtcbiAgfVxuXG4gICY6Zm9jdXMge1xuICAgIG91dGxpbmU6IDA7XG4gIH1cbn1cblxucHJlIHtcbiAgJjpob3ZlciA+IC5leHBhbmQtYnV0dG9uIHtcbiAgICBvcGFjaXR5OiAxO1xuICAgIHRyYW5zaXRpb246IDAuMnM7XG4gIH1cbn1cblxuI21lcm1haWQtY29udGFpbmVyIHtcbiAgcG9zaXRpb246IGZpeGVkO1xuICBjb250YWluOiBsYXlvdXQ7XG4gIHotaW5kZXg6IDk5OTtcbiAgbGVmdDogMDtcbiAgdG9wOiAwO1xuICB3aWR0aDogMTAwdnc7XG4gIGhlaWdodDogMTAwdmg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIGRpc3BsYXk6IG5vbmU7XG4gIGJhY2tkcm9wLWZpbHRlcjogYmx1cig0cHgpO1xuICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuNSk7XG5cbiAgJi5hY3RpdmUge1xuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgfVxuXG4gICYgPiAjbWVybWFpZC1zcGFjZSB7XG4gICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICB0b3A6IDUwJTtcbiAgICBsZWZ0OiA1MCU7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XG4gICAgaGVpZ2h0OiA4MHZoO1xuICAgIHdpZHRoOiA4MHZ3O1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG5cbiAgICAmID4gLm1lcm1haWQtY29udGVudCB7XG4gICAgICBwYWRkaW5nOiAycmVtO1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><script src="../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://undefined/index.xml"/></head><body data-slug="Réseaux-avancés-(Advanced-Networking)/TD/TD-01-Network-Fundamentals---Detailed-Solutions"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../..">UMBB A2I</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>Search</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="Reader mode"><title>Reader mode</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-105"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-105" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../Réseaux-avancés-(Advanced-Networking)/">Réseaux avancés (Advanced Networking)</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../Réseaux-avancés-(Advanced-Networking)/TD/">TD</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>TD 01 Network Fundamentals   Detailed Solutions</a></div></nav><h1 class="article-title">TD 01 Network Fundamentals - Detailed Solutions</h1><p show-comma="true" class="content-meta"><time datetime="2025-11-08T05:10:48.000Z">Nov 08, 2025</time><span>12 min read</span></p></div></div><article class="popover-hint"><h2 id="exercise-01-mac-addresses">Exercise 01: MAC Addresses<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#exercise-01-mac-addresses" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p><strong>Problem:</strong>
+Given the following MAC addresses:
+a) <code>01-00-5E-AB-CD-EF</code>
+b) <code>00-00-25-47-EF-CD</code>
+c) <code>11-52-AB-9B-DC-12</code>
+d) <code>00-01-4B-B4-A2-EF</code></p>
+<ol>
+<li>Give the type of each MAC address.</li>
+<li>Can these addresses belong to the “source address” field of an Ethernet frame? Justify.</li>
+</ol>
+</blockquote>
+<h3 id="theory-from-your-notes">Theory from Your Notes<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#theory-from-your-notes" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Your notes contain a table that is key to solving this. It shows different MAC addresses and categorizes them. The core concept is:</p>
+<ul>
+<li><strong>The first byte of the MAC address determines its type.</strong></li>
+<li>Specifically, we look at the <strong>very last bit</strong> (the Least Significant Bit or LSB) of that first byte.</li>
+<li><strong>Unicast:</strong> If the last bit is <code>0</code>, the address points to a single, unique device. This is like a specific street address for one house. In hexadecimal, the second digit of the first byte will be an even number (0, 2, 4, 6, 8, A, C, E).</li>
+<li><strong>Multicast:</strong> If the last bit is <code>1</code>, the address points to a group of devices. This is like sending a flyer to everyone on a specific mailing list. In hexadecimal, the second digit of the first byte will be an odd number (1, 3, 5, 7, 9, B, D, F).</li>
+<li><strong>Source Address Rule:</strong> A computer sending data must identify itself uniquely. Therefore, the source MAC address (<code>@mac SRC</code> in your notes) <strong>must always be a Unicast address</strong>. A sender can’t pretend to be a whole group. Your notes confirm this with a “oui” (yes) for unicast and “non” for multicast in the source address column.</li>
+</ul>
+<h3 id="solution">Solution<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#solution" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h4 id="1-type-of-each-mac-address">1. Type of each MAC address<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-type-of-each-mac-address" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>Let’s analyze the first byte of each address:</p>
+<ul>
+<li>
+<p><strong>a) <code>01-00-5E-AB-CD-EF</code></strong></p>
+<ul>
+<li>First byte: <code>01</code>.</li>
+<li>In binary, <code>01</code> is <code>0000000**1**</code>. The last bit is <code>1</code>.</li>
+<li><strong>Type: Multicast</strong>. This is consistent with your notes which list this exact address format as multicast.</li>
+</ul>
+</li>
+<li>
+<p><strong>b) <code>00-00-25-47-EF-CD</code></strong></p>
+<ul>
+<li>First byte: <code>00</code>.</li>
+<li>In binary, <code>00</code> is <code>0000000**0**</code>. The last bit is <code>0</code>.</li>
+<li><strong>Type: Unicast</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>c) <code>11-52-AB-9B-DC-12</code></strong></p>
+<ul>
+<li>First byte: <code>11</code>.</li>
+<li>In binary, <code>11</code> is <code>0001000**1**</code>. The last bit is <code>1</code>.</li>
+<li><strong>Type: Multicast</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>d) <code>00-01-4B-B4-A2-EF</code></strong></p>
+<ul>
+<li>First byte: <code>00</code>.</li>
+<li>In binary, <code>00</code> is <code>0000000**0**</code>. The last bit is <code>0</code>.</li>
+<li><strong>Type: Unicast</strong>.</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-can-they-be-a-source-address">2. Can they be a source address?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-can-they-be-a-source-address" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>Based on the rule that source addresses must be unicast:</p>
+<ul>
+<li><strong>a) Multicast:</strong> <strong>No</strong>, it cannot be a source address.</li>
+<li><strong>b) Unicast:</strong> <strong>Yes</strong>, it can be a source address.</li>
+<li><strong>c) Multicast:</strong> <strong>No</strong>, it cannot be a source address.</li>
+<li><strong>d) Unicast:</strong> <strong>Yes</strong>, it can be a source address.</li>
+</ul>
+<hr/>
+<h2 id="exercise-02-ethernet-frame-analysis">Exercise 02: Ethernet Frame Analysis<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#exercise-02-ethernet-frame-analysis" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p><strong>Problem:</strong>
+The following is an Ethernet frame (Preamble and FCS removed).
+<code>ffff ffff ffff 09ab 14d8 0548 0806 0001 0800 0604 0001 09ab 14d8 0548 7d05 300a 0000 0000 0000 7d12 6e03</code></p>
+<ol>
+<li>Analyze the frame, identifying the MAC addresses, the ‘Type’ field, and the ‘Data’ field. What do you notice about the data field?</li>
+<li>Indicate the type of the destination MAC address.</li>
+</ol>
+</blockquote>
+<h3 id="theory-from-your-notes-1">Theory from Your Notes<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#theory-from-your-notes-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Your notes show a clear diagram of an Ethernet frame structure. After the (removed) Preamble, the structure is:</p>
+<pre><code>+---------------------+-------------------+------------+-----------------+
+| Destination MAC     | Source MAC        | EtherType  | Data (Payload)  |
+| (6 Bytes)           | (6 Bytes)         | (2 Bytes)  | (Variable)      |
++---------------------+-------------------+------------+-----------------+
+</code></pre>
+<p>Your notes also analyze a similar frame, pointing out that <code>FFFF FFFF FFFF</code> is a <strong>Broadcast</strong> address and that the protocol involved is <strong>ARP</strong> (Address Resolution Protocol), which is identified by the <code>EtherType</code> value <code>0806</code>.</p>
+<h3 id="solution-1">Solution<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#solution-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h4 id="1-frame-analysis">1. Frame Analysis<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-frame-analysis" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>Let’s break down the hexadecimal data stream based on the frame structure:</p>
+<ul>
+<li>
+<p><strong>Destination MAC (first 6 bytes):</strong>
+<code>ffff ffff ffff</code></p>
+<ul>
+<li>This translates to <strong><code>FF:FF:FF:FF:FF:FF</code></strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Source MAC (next 6 bytes):</strong>
+<code>09ab 14d8 0548</code></p>
+<ul>
+<li>This translates to <strong><code>09:AB:14:D8:05:48</code></strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>EtherType (next 2 bytes):</strong>
+<code>0806</code></p>
+<ul>
+<li>This value, <code>0x0806</code>, is the standard identifier for the <strong>ARP (Address Resolution Protocol)</strong>. This confirms what’s hinted at in your notes. The purpose of ARP is to ask, “Who has this IP address? Tell me your MAC address.”</li>
+</ul>
+</li>
+<li>
+<p><strong>Data (the rest of the stream):</strong>
+<code>0001 0800 0604 0001 09ab 14d8 0548 7d05 300a 0000 0000 0000 7d12 6e03</code></p>
+<ul>
+<li><strong>What is remarkable about this field?</strong> Since the EtherType told us this is an ARP packet, the data field itself has a specific structure. It’s not just random data; it contains the ARP message. If we were to decode it, we would find the sender’s MAC and IP addresses and the IP address of the device it’s looking for. The presence of a structured protocol message <em>inside</em> the Ethernet data field is the key observation.</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-type-of-the-destination-mac-address">2. Type of the Destination MAC address<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-type-of-the-destination-mac-address" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li>The destination MAC address is <code>FF:FF:FF:FF:FF:FF</code>.</li>
+<li>This is a special address. As shown in your notes, it is the <strong>Broadcast</strong> address.</li>
+<li>A broadcast is a message sent to <strong>every single device</strong> on the local network segment. This makes sense for an ARP request—the sending machine doesn’t know the specific MAC address it’s looking for, so it shouts the question out to everyone on the network.</li>
+</ul>
+<hr/>
+<h2 id="exercise-03-ip-address-analysis">Exercise 03: IP Address Analysis<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#exercise-03-ip-address-analysis" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p><strong>Problem:</strong> For each of the following IP addresses, determine if it is a valid and usable address. If so, indicate its class, network part, host part, network address, and broadcast address.</p>
+</blockquote>
+<h3 id="theory-from-your-notes-2">Theory from Your Notes<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#theory-from-your-notes-2" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Your whiteboard photos provide a complete guide for this:</p>
+<ol>
+<li><strong>IP Address Classes:</strong> The class is determined by the <strong>first octet</strong> (the first number).
+<ul>
+<li><strong>Class A:</strong> <code>0 - 127</code> (Binary starts with <code>0</code>)</li>
+<li><strong>Class B:</strong> <code>128 - 191</code> (Binary starts with <code>10</code>)</li>
+<li><strong>Class C:</strong> <code>192 - 223</code> (Binary starts with <code>110</code>)</li>
+<li><strong>Class D:</strong> <code>224 - 239</code> (Multicast)</li>
+<li><strong>Class E:</strong> <code>240 - 255</code> (Experimental)</li>
+</ul>
+</li>
+<li><strong>Default Structure (Network.Host):</strong>
+<ul>
+<li>Class A: <code>Network.Host.Host.Host</code></li>
+<li>Class B: <code>Network.Network.Host.Host</code></li>
+<li>Class C: <code>Network.Network.Network.Host</code></li>
+</ul>
+</li>
+<li><strong>Special Addresses (Not usable for a regular device):</strong>
+<ul>
+<li><strong>Network Address:</strong> The address where all host bits are <code>0</code>. It identifies the network itself.</li>
+<li><strong>Broadcast Address:</strong> The address where all host bits are <code>1</code>. Used to send a message to all devices on the network.</li>
+<li><strong>Loopback:</strong> The <code>127.x.x.x</code> range is reserved for testing the local machine (like talking to yourself).</li>
+<li><strong>Invalid Address:</strong> Any octet greater than <code>255</code> is impossible.</li>
+</ul>
+</li>
+</ol>
+<h3 id="solution-2">Solution<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#solution-2" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Here is a detailed breakdown in a table format:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th style="text-align:left;">IP Address</th><th style="text-align:left;">Valid/Usable?</th><th style="text-align:left;">Reason</th><th style="text-align:left;">Class</th><th style="text-align:left;">Network Part</th><th style="text-align:left;">Host Part</th><th style="text-align:left;">Network Address</th><th style="text-align:left;">Broadcast Address</th></tr></thead><tbody><tr><td style="text-align:left;"><code>131.107.256.80</code></td><td style="text-align:left;"><strong>Invalid</strong></td><td style="text-align:left;">The third octet <code>256</code> is greater than 255.</td><td style="text-align:left;">-</td><td style="text-align:left;">-</td><td style="text-align:left;">-</td><td style="text-align:left;">-</td><td style="text-align:left;">-</td></tr><tr><td style="text-align:left;"><code>127.1.1.1</code></td><td style="text-align:left;"><strong>Valid, but not usable</strong></td><td style="text-align:left;">Reserved for Loopback.</td><td style="text-align:left;">A</td><td style="text-align:left;"><code>127</code></td><td style="text-align:left;"><code>1.1.1</code></td><td style="text-align:left;"><code>127.0.0.0</code></td><td style="text-align:left;"><code>127.255.255.255</code></td></tr><tr><td style="text-align:left;"><code>255.255.255.255</code></td><td style="text-align:left;"><strong>Valid, but not usable</strong></td><td style="text-align:left;">This is the limited broadcast address.</td><td style="text-align:left;">E</td><td style="text-align:left;">-</td><td style="text-align:left;">-</td><td style="text-align:left;">-</td><td style="text-align:left;">-</td></tr><tr><td style="text-align:left;"><code>214.0.0.4</code></td><td style="text-align:left;"><strong>Valid and Usable</strong></td><td style="text-align:left;">A standard host address.</td><td style="text-align:left;">C</td><td style="text-align:left;"><code>214.0.0</code></td><td style="text-align:left;"><code>4</code></td><td style="text-align:left;"><code>214.0.0.0</code></td><td style="text-align:left;"><code>214.0.0.255</code></td></tr><tr><td style="text-align:left;"><code>222.222.255.222</code></td><td style="text-align:left;"><strong>Valid and Usable</strong></td><td style="text-align:left;">A standard host address.</td><td style="text-align:left;">C</td><td style="text-align:left;"><code>222.222.255</code></td><td style="text-align:left;"><code>222</code></td><td style="text-align:left;"><code>222.222.255.0</code></td><td style="text-align:left;"><code>222.222.255.255</code></td></tr><tr><td style="text-align:left;"><code>198.121.254.255</code></td><td style="text-align:left;"><strong>Valid, but not usable</strong></td><td style="text-align:left;">This is the broadcast address for the <code>198.121.254.0</code> network.</td><td style="text-align:left;">C</td><td style="text-align:left;"><code>198.121.254</code></td><td style="text-align:left;"><code>255</code></td><td style="text-align:left;"><code>198.121.254.0</code></td><td style="text-align:left;"><code>198.121.254.255</code></td></tr><tr><td style="text-align:left;"><code>132.4.0.5</code></td><td style="text-align:left;"><strong>Valid and Usable</strong></td><td style="text-align:left;">A standard host address.</td><td style="text-align:left;">B</td><td style="text-align:left;"><code>132.4</code></td><td style="text-align:left;"><code>0.5</code></td><td style="text-align:left;"><code>132.4.0.0</code></td><td style="text-align:left;"><code>132.4.255.255</code></td></tr><tr><td style="text-align:left;"><code>248.5.10.156</code></td><td style="text-align:left;"><strong>Valid, but not usable</strong></td><td style="text-align:left;">Belongs to Class E (Experimental).</td><td style="text-align:left;">E</td><td style="text-align:left;">-</td><td style="text-align:left;">-</td><td style="text-align:left;">-</td><td style="text-align:left;">-</td></tr><tr><td style="text-align:left;"><code>231.200.1.1</code></td><td style="text-align:left;"><strong>Valid, but not usable</strong></td><td style="text-align:left;">Belongs to Class D (Multicast).</td><td style="text-align:left;">D</td><td style="text-align:left;">-</td><td style="text-align:left;">-</td><td style="text-align:left;">-</td><td style="text-align:left;">-</td></tr><tr><td style="text-align:left;"><code>10.4.200.200</code></td><td style="text-align:left;"><strong>Valid and Usable</strong></td><td style="text-align:left;">A standard host address.</td><td style="text-align:left;">A</td><td style="text-align:left;"><code>10</code></td><td style="text-align:left;"><code>4.200.200</code></td><td style="text-align:left;"><code>10.0.0.0</code></td><td style="text-align:left;"><code>10.255.255.255</code></td></tr><tr><td style="text-align:left;"><code>126.1.0.0</code></td><td style="text-align:left;"><strong>Valid, but not usable</strong></td><td style="text-align:left;">This is the network address for the <code>126.0.0.0</code> network.</td><td style="text-align:left;">A</td><td style="text-align:left;"><code>126</code></td><td style="text-align:left;"><code>0.0.0</code></td><td style="text-align:left;"><code>126.0.0.0</code></td><td style="text-align:left;"><code>126.255.255.255</code></td></tr><tr><td style="text-align:left;"><code>191.48.54.100</code></td><td style="text-align:left;"><strong>Valid and Usable</strong></td><td style="text-align:left;">A standard host address.</td><td style="text-align:left;">B</td><td style="text-align:left;"><code>191.48</code></td><td style="text-align:left;"><code>54.100</code></td><td style="text-align:left;"><code>191.48.0.0</code></td><td style="text-align:left;"><code>191.48.255.255</code></td></tr></tbody></table></div>
+<hr/>
+<h2 id="exercise-04-global-message-broadcast">Exercise 04: Global Message (Broadcast)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#exercise-04-global-message-broadcast" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p><strong>Problem:</strong> You are given a list of machine IPs. Machine 1 (<code>192.175.60.3</code>) wants to send a global message on its network. Give the destination IP address it will use and the numbers of the machines that can respond to its request.</p>
+</blockquote>
+<h3 id="theory-from-your-notes-3">Theory from Your Notes<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#theory-from-your-notes-3" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>The whiteboard example for this exact problem (<code>Exo4</code>) shows the clear logic:</p>
+<ol>
+<li>To send a message to everyone on your <em>local network</em>, you use the network’s <strong>broadcast address</strong>.</li>
+<li>To find the broadcast address, you first identify the network portion of your own IP address based on its class.</li>
+<li>You then take that network portion and set all the bits in the host portion to <code>1</code>. For a full octet, this is <code>255</code>.</li>
+<li>Only machines that share the <strong>exact same network address</strong> as the sender will receive and process this broadcast message.</li>
+</ol>
+<h3 id="solution-3">Solution<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#solution-3" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p><strong>Find Machine 1’s Network and Broadcast Address:</strong></p>
+<ul>
+<li>Machine 1’s IP: <code>192.175.60.3</code>.</li>
+<li>The first octet is <code>192</code>, so this is a <strong>Class C</strong> address.</li>
+<li>For Class C, the network part is the first three octets: <code>192.175.60</code>. The network address is <code>192.175.60.0</code>.</li>
+<li>To get the broadcast address, we take the network part and set the host part (the last octet) to all <code>1</code>s, which is <code>255</code>.</li>
+<li>The destination IP address will be <strong><code>192.175.60.255</code></strong>. Your whiteboard notes confirm this with “<code>L'@ du dest = 192.175.60.255</code>”.</li>
+</ul>
+</li>
+<li>
+<p><strong>Identify Machines on the Same Network:</strong>
+We need to check which machines have the same network part: <code>192.175.60</code>.</p>
+<ul>
+<li>Machine 1: <code>192.175.60.3</code> (The sender)</li>
+<li>Machine 2: <code>192.175.60.4</code> <span>→</span> <strong>Matches.</strong></li>
+<li>Machine 3: <code>192.176.60.3</code> <span>→</span> Does not match (network is <code>192.176.60</code>).</li>
+<li>Machine 4: <code>192.175.60.5</code> <span>→</span> <strong>Matches.</strong></li>
+<li>Machine 5: <code>192.175.60.38</code> <span>→</span> <strong>Matches.</strong></li>
+<li>Machine 6: <code>172.175.60.38</code> <span>→</span> Does not match (this is a Class B address on network <code>172.175.0.0</code>).</li>
+<li>Machine 7: <code>92.175.60.38</code> <span>→</span> Does not match (this is a Class A address on network <code>92.0.0.0</code>).</li>
+</ul>
+</li>
+</ol>
+<p>The machines that can respond are <strong>Machine 2, Machine 4, and Machine 5</strong>.</p>
+<hr/>
+<h2 id="exercise-05-subnetting">Exercise 05: Subnetting<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#exercise-05-subnetting" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p><strong>Problem:</strong>
+A machine M has the IP address <code>184.65.94.20</code>.</p>
+<ol>
+<li>What is the class and the address of the network hosting M?</li>
+</ol>
+<p>Now, assume this network is given the subnet mask <code>255.255.240.0</code>.
+2. How many subnets are possible, and how many machines can be hosted in each?
+3. What is the subnet number (address) hosting M?
+4. Which of the machines M1…M6 belong to the same subnet as M?</p>
+</blockquote>
+<h3 id="theory-from-your-notes-4">Theory from Your Notes<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#theory-from-your-notes-4" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Your whiteboard (<code>Exo5</code>) and notebook pages cover this extensively. Subnetting divides a large network into smaller, more manageable pieces (subnets).</p>
+<ul>
+<li><strong>Subnet Mask:</strong> The subnet mask tells us which part of the IP address is the network/subnet and which is the host. The <code>1</code>s in the mask represent the network/subnet part, and the <code>0</code>s represent the host part.</li>
+<li><strong>Borrowing Bits:</strong> We create subnets by “borrowing” bits from the host part of the address and adding them to the network part.
+<ul>
+<li>If we borrow <code>n</code> bits, we can create <code>2^n</code> subnets.</li>
+<li>If <code>h</code> bits are left for the host part, we can have <code>2^h - 2</code> usable host addresses per subnet. We subtract 2 for the subnet’s own address and its broadcast address.</li>
+</ul>
+</li>
+<li><strong>Finding the Subnet Address:</strong> The key operation is a <strong>bitwise AND</strong> between the machine’s IP address and the subnet mask. This operation isolates the network/subnet portion of the address, giving you the address of the subnet it belongs to.</li>
+</ul>
+<h3 id="solution-4">Solution<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#solution-4" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h4 id="1-class-and-network-address">1. Class and Network Address<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-class-and-network-address" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li>Machine M’s IP: <code>184.65.94.20</code>.</li>
+<li>The first octet <code>184</code> is between 128 and 191, so this is a <strong>Class B</strong> address.</li>
+<li>By default (without subnetting), the network address for a Class B is the first two octets, so it is <strong><code>184.65.0.0</code></strong>.</li>
+</ul>
+<h4 id="2-number-of-subnets-and-hosts">2. Number of Subnets and Hosts<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-number-of-subnets-and-hosts" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li>
+<p><strong>Default Class B mask:</strong> <code>255.255.0.0</code></p>
+<ul>
+<li>In binary: <code>11111111.11111111.00000000.00000000</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Given Subnet Mask:</strong> <code>255.255.240.0</code></p>
+<ul>
+<li>In binary: <code>11111111.11111111.11110000.00000000</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Bits Borrowed (n):</strong> By comparing the masks, we can see that <strong>4 bits</strong> have been borrowed from the host portion in the third octet.</p>
+</li>
+<li>
+<p><strong>Number of Possible Subnets:</strong> <code>2^n = 2^4 = **16 subnets**</code>.</p>
+</li>
+<li>
+<p><strong>Host Bits Remaining (h):</strong> The default Class B has 16 host bits (the last two octets). We borrowed 4.</p>
+<ul>
+<li><code>h = 16 - 4 = 12</code> bits remain for hosts.</li>
+</ul>
+</li>
+<li>
+<p><strong>Number of Hosts per Subnet:</strong> <code>2^h - 2 = 2^12 - 2 = 4096 - 2 = **4094 usable hosts**</code>.</p>
+</li>
+</ul>
+<h4 id="3-subnet-address-of-machine-m">3. Subnet Address of Machine M<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-subnet-address-of-machine-m" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>We perform a bitwise AND between M’s IP (<code>184.65.94.20</code>) and the subnet mask (<code>255.255.240.0</code>). The only interesting part is the third octet.</p>
+<ul>
+<li><code>94</code> in binary is <code>0101 1110</code></li>
+<li><code>240</code> in binary is <code>1111 0000</code></li>
+</ul>
+<pre><code>  0101 1110  (IP's 3rd octet: 94)
+&amp; 1111 0000  (Mask's 3rd octet: 240)
+-----------------
+  0101 0000  (Result in binary)
+</code></pre>
+<ul>
+<li><code>0101 0000</code> in decimal is <code>64 + 16 = 80</code>.</li>
+<li>Therefore, the subnet address for machine M is <strong><code>184.65.80.0</code></strong>.</li>
+</ul>
+<h4 id="4-machines-on-the-same-subnet">4. Machines on the Same Subnet<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#4-machines-on-the-same-subnet" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>We perform the same AND operation for all other machines. A machine is on the same subnet if the result is also <code>184.65.80.0</code>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th style="text-align:left;">Machine</th><th style="text-align:left;">IP Address</th><th style="text-align:left;">3rd Octet <code>AND</code> 240</th><th style="text-align:left;">Resulting Subnet Address</th><th style="text-align:left;">Same Subnet?</th></tr></thead><tbody><tr><td style="text-align:left;">M1</td><td style="text-align:left;"><code>184.65.75.1</code></td><td style="text-align:left;"><code>75 &amp; 240 = 64</code></td><td style="text-align:left;"><code>184.65.64.0</code></td><td style="text-align:left;">No</td></tr><tr><td style="text-align:left;">M2</td><td style="text-align:left;"><code>184.65.100.1</code></td><td style="text-align:left;"><code>100 &amp; 240 = 96</code></td><td style="text-align:left;"><code>184.65.96.0</code></td><td style="text-align:left;">No</td></tr><tr><td style="text-align:left;">M3</td><td style="text-align:left;"><code>184.65.90.1</code></td><td style="text-align:left;"><code>90 &amp; 240 = 80</code></td><td style="text-align:left;"><code>184.65.80.0</code></td><td style="text-align:left;"><strong>Yes</strong></td></tr><tr><td style="text-align:left;">M4</td><td style="text-align:left;"><code>184.65.78.1</code></td><td style="text-align:left;"><code>78 &amp; 240 = 64</code></td><td style="text-align:left;"><code>184.65.64.0</code></td><td style="text-align:left;">No</td></tr><tr><td style="text-align:left;">M5</td><td style="text-align:left;"><code>184.65.87.1</code></td><td style="text-align:left;"><code>87 &amp; 240 = 80</code></td><td style="text-align:left;"><code>184.65.80.0</code></td><td style="text-align:left;"><strong>Yes</strong></td></tr><tr><td style="text-align:left;">M6</td><td style="text-align:left;"><code>184.65.94.1</code></td><td style="text-align:left;"><code>94 &amp; 240 = 80</code></td><td style="text-align:left;"><code>184.65.80.0</code></td><td style="text-align:left;"><strong>Yes</strong></td></tr></tbody></table></div>
+<p>The machines on the same subnet as M are <strong>M3, M5, and M6</strong>.</p>
+<hr/>
+<h2 id="exercise-06-calculating-subnet-masks">Exercise 06: Calculating Subnet Masks<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#exercise-06-calculating-subnet-masks" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p><strong>Problem:</strong> For each network ID and required number of subnets (SR), calculate the necessary subnet mask and the number of machines per subnet.</p>
+</blockquote>
+<h3 id="theory-from-your-notes-5">Theory from Your Notes<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#theory-from-your-notes-5" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>This exercise is the reverse of Exercise 5. The whiteboard table provides the answers, and the method is based on this logic:</p>
+<ol>
+<li><strong>Identify the Class:</strong> Find the class of the network ID to know the default number of host bits available.
+<ul>
+<li>Class A: 24 host bits</li>
+<li>Class B: 16 host bits</li>
+<li>Class C: 8 host bits</li>
+</ul>
+</li>
+<li><strong>Find Bits to Borrow (n):</strong> Given the required number of subnets (SR), find the smallest integer <code>n</code> such that <code>2^n ≥ SR</code>. Your notes show this formula as <code>n_bits = log2(N_SR)</code>.</li>
+<li><strong>Calculate the Subnet Mask:</strong> Start with the default mask for the class and change the first <code>n</code> host bits from <code>0</code> to <code>1</code>.</li>
+<li><strong>Calculate Hosts per Subnet:</strong> Find the number of remaining host bits, <code>h = (default host bits) - n</code>. The number of usable machines is <code>2^h - 2</code>.</li>
+</ol>
+<h3 id="solution-5">Solution<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#solution-5" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>This table breaks down the calculation for each case, matching the results on your whiteboard.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th style="text-align:left;">NetID</th><th style="text-align:left;">Required SR</th><th style="text-align:left;">Class / Default Host Bits</th><th style="text-align:left;">Bits to Borrow (n) <code>(2^n ≥ SR)</code></th><th style="text-align:left;">Mask Calculation</th><th style="text-align:left;">Final Mask</th><th style="text-align:left;">Machines/SR <code>(2^h - 2)</code></th></tr></thead><tbody><tr><td style="text-align:left;"><code>148.25.0.0</code></td><td style="text-align:left;">37</td><td style="text-align:left;"><strong>Class B</strong> / 16</td><td style="text-align:left;"><code>2^5=32</code> (too small), <code>2^6=64</code> (ok) <span>→</span> <strong>n=6</strong></td><td style="text-align:left;"><code>255.255.</code> followed by 6 ones: <code>11111100.0</code> <span>→</span> <code>.252.0</code></td><td style="text-align:left;"><strong><code>255.255.252.0</code></strong></td><td style="text-align:left;"><code>h=16-6=10</code>. <code>2^10 - 2 = 1024 - 2 = **1022**</code></td></tr><tr><td style="text-align:left;"><code>198.63.24.0</code></td><td style="text-align:left;">2</td><td style="text-align:left;"><strong>Class C</strong> / 8</td><td style="text-align:left;"><code>2^1=2</code> (ok) <span>→</span> <strong>n=1</strong></td><td style="text-align:left;"><code>255.255.255.</code> followed by 1 one: <code>10000000</code> <span>→</span> <code>.128</code></td><td style="text-align:left;"><strong><code>255.255.255.128</code></strong></td><td style="text-align:left;"><code>h=8-1=7</code>. <code>2^7 - 2 = 128 - 2 = **126**</code></td></tr><tr><td style="text-align:left;"><code>110.0.0.0</code></td><td style="text-align:left;">1000</td><td style="text-align:left;"><strong>Class A</strong> / 24</td><td style="text-align:left;"><code>2^9=512</code> (too small), <code>2^10=1024</code> (ok) <span>→</span> <strong>n=10</strong></td><td style="text-align:left;"><code>255.</code> followed by 10 ones: <code>11111111.11000000.0</code> <span>→</span> <code>.255.192.0</code></td><td style="text-align:left;"><strong><code>255.255.192.0</code></strong></td><td style="text-align:left;"><code>h=24-10=14</code>. <code>2^14 - 2 = 16384 - 2 = **16382**</code></td></tr><tr><td style="text-align:left;"><code>175.23.0.0</code></td><td style="text-align:left;">550</td><td style="text-align:left;"><strong>Class B</strong> / 16</td><td style="text-align:left;"><code>2^9=512</code> (too small), <code>2^10=1024</code> (ok) <span>→</span> <strong>n=10</strong></td><td style="text-align:left;"><code>255.255.</code> followed by 10 ones: <code>11111111.11000000</code> <span>→</span> <code>.255.192</code></td><td style="text-align:left;"><strong><code>255.255.255.192</code></strong></td><td style="text-align:left;"><code>h=16-10=6</code>. <code>2^6 - 2 = 64 - 2 = **62**</code></td></tr><tr><td style="text-align:left;"><code>209.206.202.0</code></td><td style="text-align:left;">60</td><td style="text-align:left;"><strong>Class C</strong> / 8</td><td style="text-align:left;"><code>2^5=32</code> (too small), <code>2^6=64</code> (ok) <span>→</span> <strong>n=6</strong></td><td style="text-align:left;"><code>255.255.255.</code> followed by 6 ones: <code>11111100</code> <span>→</span> <code>.252</code></td><td style="text-align:left;"><strong><code>255.255.255.252</code></strong></td><td style="text-align:left;"><code>h=8-6=2</code>. <code>2^2 - 2 = 4 - 2 = **2**</code></td></tr></tbody></table></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-35" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#exercise-01-mac-addresses" data-for="exercise-01-mac-addresses">Exercise 01: MAC Addresses</a></li><li class="depth-1"><a href="#theory-from-your-notes" data-for="theory-from-your-notes">Theory from Your Notes</a></li><li class="depth-1"><a href="#solution" data-for="solution">Solution</a></li><li class="depth-0"><a href="#exercise-02-ethernet-frame-analysis" data-for="exercise-02-ethernet-frame-analysis">Exercise 02: Ethernet Frame Analysis</a></li><li class="depth-1"><a href="#theory-from-your-notes-1" data-for="theory-from-your-notes-1">Theory from Your Notes</a></li><li class="depth-1"><a href="#solution-1" data-for="solution-1">Solution</a></li><li class="depth-0"><a href="#exercise-03-ip-address-analysis" data-for="exercise-03-ip-address-analysis">Exercise 03: IP Address Analysis</a></li><li class="depth-1"><a href="#theory-from-your-notes-2" data-for="theory-from-your-notes-2">Theory from Your Notes</a></li><li class="depth-1"><a href="#solution-2" data-for="solution-2">Solution</a></li><li class="depth-0"><a href="#exercise-04-global-message-broadcast" data-for="exercise-04-global-message-broadcast">Exercise 04: Global Message (Broadcast)</a></li><li class="depth-1"><a href="#theory-from-your-notes-3" data-for="theory-from-your-notes-3">Theory from Your Notes</a></li><li class="depth-1"><a href="#solution-3" data-for="solution-3">Solution</a></li><li class="depth-0"><a href="#exercise-05-subnetting" data-for="exercise-05-subnetting">Exercise 05: Subnetting</a></li><li class="depth-1"><a href="#theory-from-your-notes-4" data-for="theory-from-your-notes-4">Theory from Your Notes</a></li><li class="depth-1"><a href="#solution-4" data-for="solution-4">Solution</a></li><li class="depth-0"><a href="#exercise-06-calculating-subnet-masks" data-for="exercise-06-calculating-subnet-masks">Exercise 06: Calculating Subnet Masks</a></li><li class="depth-1"><a href="#theory-from-your-notes-5" data-for="theory-from-your-notes-5">Theory from Your Notes</a></li><li class="depth-1"><a href="#solution-5" data-for="solution-5">Solution</a></li><li class="overflow-end"></li></ul></div></div><footer class><ul><li><a href="https://github.com/Vtheonly">GitHub</a></li><li><a href="https://www.linkedin.com/in/mersel-fares-baa8aa268/">Linkedin</a></li></ul></footer></div></div></body><script type="application/javascript">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module">function f(i,e){if(!i)return;function r(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function t(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}i?.addEventListener("click",r),window.addCleanup(()=>i?.removeEventListener("click",r)),document.addEventListener("keydown",t),window.addCleanup(()=>document.removeEventListener("keydown",t))}function y(i){for(;i.firstChild;)i.removeChild(i.firstChild)}var h=class{constructor(e,r){this.container=e;this.content=r;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),r=this.onMouseMove.bind(this),t=this.onMouseUp.bind(this),o=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",r),document.addEventListener("mouseup",t),window.addEventListener("resize",o),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",r),()=>document.removeEventListener("mouseup",t),()=>window.removeEventListener("resize",o))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let r=this.createButton("+",()=>this.zoom(.1)),t=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(t),e.appendChild(o),e.appendChild(r),this.container.appendChild(e)}createButton(e,r){let t=document.createElement("button");return t.textContent=e,t.className="mermaid-control-button",t.addEventListener("click",r),window.addCleanup(()=>t.removeEventListener("click",r)),t}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}zoom(e){let r=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),t=this.content.getBoundingClientRect(),o=t.width/2,n=t.height/2,c=r-this.scale;this.currentPan.x-=o*c,this.currentPan.y-=n*c,this.scale=r,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){this.scale=1;let e=this.content.querySelector("svg");this.currentPan={x:e.getBoundingClientRect().width/2,y:e.getBoundingClientRect().height/2},this.updateTransform()}},C=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],E;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;E||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let r=E.default,t=new WeakMap;for(let n of e)t.set(n,n.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let a=t.get(s);a&&(s.innerHTML=a)}let n=C.reduce((s,a)=>(s[a]=window.getComputedStyle(document.documentElement).getPropertyValue(a),s),{}),c=document.documentElement.getAttribute("saved-theme")==="dark";r.initialize({startOnLoad:!1,securityLevel:"loose",theme:c?"dark":"base",themeVariables:{fontFamily:n["--codeFont"],primaryColor:n["--light"],primaryTextColor:n["--darkgray"],primaryBorderColor:n["--tertiary"],lineColor:n["--darkgray"],secondaryColor:n["--secondary"],tertiaryColor:n["--tertiary"],clusterBkg:n["--light"],edgeLabelBackground:n["--highlight"]}}),await r.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let n=0;n<e.length;n++){let v=function(){let g=l.querySelector("#mermaid-space"),m=l.querySelector(".mermaid-content");if(!m)return;y(m);let w=c.querySelector("svg").cloneNode(!0);m.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new h(g,m)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},c=e[n],s=c.parentElement,a=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(a),L=a.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),f(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../../postscript.js" type="module"></script></html>
