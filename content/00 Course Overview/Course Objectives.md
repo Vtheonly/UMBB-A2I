@@ -1,7 +1,3 @@
----
-title: Pixel Relationships and Distance
-slug: 01-Introduction-to-Digital-Images/1.6-Pixel-Relationships-and-Distance
----
 
 
 # Course Objectives: Image Processing and Analysis
