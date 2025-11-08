@@ -9,9 +9,9 @@ An image histogram is a graphical representation of the tonal distribution in a 
 -   **Y-axis:** Represents the frequency, or the total count of pixels in the image that have a specific intensity value from the X-axis.
 
 In formal terms, as seen in the course slides, the histogram `H` for an intensity level `x` is defined as:
-$$
+
 `H(x) = Card{P : I(P) = x}`
-$$
+
 This means the value of the histogram at `x` is the cardinality (the count) of the set of all pixels `P` in the image `I` whose intensity `I(P)` is equal to `x`.
 
 For a color image, a histogram is typically represented by three separate histograms, one for each color channel (e.g., Red, Green, and Blue).
