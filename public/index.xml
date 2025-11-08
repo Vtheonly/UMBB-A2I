@@ -7,6 +7,12 @@
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
     <title>Pixel Relationships and Distance</title>
+    <link>https://quartz.jzhao.xyz/01-Introduction-to-Digital-Images/1.0-What-is-a-Digital-Image</link>
+    <guid>https://quartz.jzhao.xyz/01-Introduction-to-Digital-Images/1.0-What-is-a-Digital-Image</guid>
+    <description><![CDATA[ What is a Digital Image? This note defines the concept of a digital image, components, and its representation for computer processing. ]]></description>
+    <pubDate>Sat, 08 Nov 2025 03:41:42 GMT</pubDate>
+  </item><item>
+    <title>Pixel Relationships and Distance</title>
     <link>https://quartz.jzhao.xyz/02-Image-Preprocessing-and-Filtering/2.4-Frequency-Domain-Filtering</link>
     <guid>https://quartz.jzhao.xyz/02-Image-Preprocessing-and-Filtering/2.4-Frequency-Domain-Filtering</guid>
     <description><![CDATA[ Core Concept Instead of operating on pixel neighborhoods, frequency domain filtering works by modifying the coefficients of the image’s constituent frequencies. ]]></description>
@@ -22,12 +28,6 @@
     <link>https://quartz.jzhao.xyz/00-Course-Overview/Course-Plan</link>
     <guid>https://quartz.jzhao.xyz/00-Course-Overview/Course-Plan</guid>
     <description><![CDATA[ Course Plan This document outlines the sequential structure of the course, organized into five main chapters. ]]></description>
-    <pubDate>Sat, 08 Nov 2025 03:20:08 GMT</pubDate>
-  </item><item>
-    <title>Pixel Relationships and Distance</title>
-    <link>https://quartz.jzhao.xyz/01-Introduction-to-Digital-Images/1.0-What-is-a-Digital-Image</link>
-    <guid>https://quartz.jzhao.xyz/01-Introduction-to-Digital-Images/1.0-What-is-a-Digital-Image</guid>
-    <description><![CDATA[ What is a Digital Image? This note defines the concept of a digital image, components, and its representation for computer processing. ]]></description>
     <pubDate>Sat, 08 Nov 2025 03:20:08 GMT</pubDate>
   </item><item>
     <title>Pixel Relationships and Distance</title>
