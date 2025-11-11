@@ -42,4 +42,4 @@ Spatial filtering involves applying an operation (via a kernel or neighborhood r
 To objectively measure how well a filter works, we compare the filtered image to the original, noise-free image.
 -   **Mean Squared Error (MSE):** Calculates the average squared difference between the pixel values of two images. A lower MSE indicates a better result.
 -   **Peak Signal-to-Noise Ratio (PSNR):** A logarithmic metric based on the MSE and the maximum possible pixel value (255).
-    -   **Insight:** PSNR is measured in decibels (dB). A **higher PSNR value indicates a better quality** reconstruction, meaning the filtered image is closer to the original, noise-free image. It is the standard way to quantify the performance of noise reduction algorithms. You can learn more in the [[In-Depth/Image Quality Metrics (PSNR, MSE)]] note.
+    -   **Insight:** PSNR is measured in decibels (dB). A **higher PSNR value indicates a better quality** reconstruction, meaning the filtered image is closer to the original, noise-free image. It is the standard way to quantify the performance of noise reduction algorithms. You can learn more in the [[Image Quality Metrics PSNR]] note.
