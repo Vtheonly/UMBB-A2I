@@ -19,11 +19,11 @@ The most intuitive way to understand it is as a process of calculating a **weigh
 
 Convolution is the fundamental tool for implementing spatial filters. The design of the kernel is an act of "feature engineering"—we are defining precisely what kind of local pattern we want to detect, suppress, or enhance in the image.
 
--   **Low-Pass Filtering (Blurring):**
-    -   **Mechanism:** Kernels with all positive coefficients, such as a box blur or a Gaussian kernel, perform local averaging.
-    -   **Purpose:** By averaging, rapid changes in pixel values (high frequencies) are smoothed out. This is effective for reducing random noise (like Gaussian noise) and for creating artistic blurring effects. The larger the kernel, the more pronounced the blurring.
+-   **Low-Pass Filtering ([[Blurring]]):**
+    -   **Mechanism:** Kernels with all positive coefficients, such as a [[Box Blur]] or a [[Gaussian Kernel]], perform local averaging.
+    -   **Purpose:** By averaging, rapid changes in pixel values (high frequencies) are smoothed out. This is effective for reducing random noise (like [[Gaussian Noise]]) and for creating artistic blurring effects. The larger the kernel, the more pronounced the blurring.
 
--   **High-Pass Filtering (Sharpening & Edge Detection):**
+-   **High-Pass Filtering ([[Sharpening & Edge Detection]]):**
     -   **Mechanism:** Kernels that have a mix of positive and negative coefficients, often summing to zero. These kernels are designed to measure the difference between a central pixel and its surroundings.
     -   **Purpose:** The filter produces a strong response (high positive or negative value) in areas of high contrast (edges) and a near-zero response in uniform regions. This is the basis for sharpening, which adds the high-pass filtered image back to the original to accentuate edges, and for edge detection, which displays the high-pass result directly.
 
