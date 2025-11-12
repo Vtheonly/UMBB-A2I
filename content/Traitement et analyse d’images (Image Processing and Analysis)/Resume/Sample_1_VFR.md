@@ -1,4 +1,4 @@
-
+#Keywords
 # Notes Complètes sur le Traitement d'Image
 
 ![[1.jpg]]
@@ -62,11 +62,11 @@ Cette section explore comment les images sont codées numériquement et les diff
 
 ### Représentation et Codage d'Images
 
-| Type | Codage | Description | Taille |
-| :--- | :--- | :--- | :--- |
-| **Binaire** | $1$ bit | $0$ pour noir, $1$ pour blanc | - |
-| **Niveau de gris** | $8$ bits | 256 niveaux de gris (noir et blanc + nuances) | - |
-| **En couleurs** | $24$ bits | ex: Modèle RVB | - |
+| Type               | Codage    | Description                                   |
+| :----------------- | :-------- | :-------------------------------------------- |
+| **Binaire**        | $1$ bit   | $0$ pour noir, $1$ pour blanc                 |
+| **Niveau de gris** | $8$ bits  | 256 niveaux de gris (noir et blanc + nuances) |
+| **En couleurs**    | $24$ bits | ex: Modèle RVB                                |
 
 ### Espaces de Couleurs (Colorimétrique ou Chromatique)
 Un espace de couleurs est un modèle mathématique décrivant la manière dont les couleurs peuvent être représentées.

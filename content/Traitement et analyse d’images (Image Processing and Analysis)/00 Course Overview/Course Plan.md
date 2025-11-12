@@ -29,4 +29,4 @@
 | [[Image Matching]]            | The task of comparing two images to determine their degree of similarity.                                                                    |
 
 ---
-tags: #course-overview #plan #modules
+tags: #course-overview #plan #modules #Keywords 
