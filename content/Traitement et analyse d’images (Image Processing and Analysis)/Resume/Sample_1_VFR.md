@@ -348,7 +348,7 @@ def filtre_mediane(image, taille=3):
 ```
 
 #### 2. Filtre de Nagao
-Filtre de lissage pour les zones homogènes qui préserve les contours. #FiltreNagao
+Filtre de lissage pour les zones homogènes qui préserve les contours. #Nagao
 - **Principe :**
     1. Définir plusieurs sous-régions autour du pixel central (ex: 9 sous-régions 3x3 pour un voisinage 5x5).
     2. Pour chaque sous-région, calculer la variance des pixels.
