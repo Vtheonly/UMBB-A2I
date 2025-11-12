@@ -1,6 +1,3 @@
-# In-Depth: Principles of Gabor Filtering
-
-This note covers the Gabor filter, a specialized linear filter widely used in computer vision for texture analysis, feature extraction, and edge detection.
 
 ## Core Concept
 

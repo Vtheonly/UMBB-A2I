@@ -1,4 +1,4 @@
-Of course. Gaussian noise is one of the most fundamental concepts in image processing, and understanding it in detail is key.
+Gaussian noise is one of the most fundamental concepts in image processing, and understanding it in detail is key.
 
 Here is a comprehensive note on "Bruit gaussien (additif)" or Additive Gaussian Noise, synthesizing the information from both your lecture slides and your lab (TP2) document into a single, detailed explanation.
 

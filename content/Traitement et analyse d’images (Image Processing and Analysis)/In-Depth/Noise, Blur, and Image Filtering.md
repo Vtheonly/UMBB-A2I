@@ -1,6 +1,3 @@
-# **Noise, Blur, and Image Filtering**
-
----
 
 ## **1. Introduction**
 
