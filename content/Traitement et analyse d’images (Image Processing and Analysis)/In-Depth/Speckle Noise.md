@@ -17,20 +17,20 @@ This means the noise intensity **depends on the brightness** of the original pix
 
 ### **2. Mathematical Model**
 
-If the clean image is denoted by ( I(x, y) ), and the speckle noise by ( n(x, y) ),  
-the observed (noisy) image ( I'(x, y) ) is given by:
+If the clean image is denoted by $I(x, y)$, and the speckle noise by $n(x, y)$,  
+the observed (noisy) image $I'(x, y)$ is given by:
 
-[  
-I'(x, y) = I(x, y) + I(x, y) \cdot n(x, y)  
-]
+$$
+I'(x, y) = I(x, y) + I(x, y) \cdot n(x, y)
+$$
 
 or equivalently:
 
-[  
-I'(x, y) = I(x, y) \cdot [1 + n(x, y)]  
-]
+$$
+I'(x, y) = I(x, y) \cdot [1 + n(x, y)]
+$$
 
-- ( n(x, y) ) is typically modeled as a random variable following a **uniform**, **gamma**, or **Rayleigh distribution**.
+- $n(x, y)$ is typically modeled as a random variable following a **uniform**, **gamma**, or **Rayleigh distribution**.
     
 - Because it’s **multiplicative**, bright regions appear more strongly corrupted than dark ones.
     
@@ -90,19 +90,19 @@ Instead, these specialized filters are often used:
 
 Suppose an ultrasound image has speckle noise modeled by:
 
-[  
-n(x, y) \sim \mathcal{N}(0, 0.1)  
-]  
+$$
+n(x, y) \sim \mathcal{N}(0, 0.1)
+$$
 and  
-[  
-I'(x, y) = I(x, y) \times (1 + n(x, y))  
-]
+$$
+I'(x, y) = I(x, y) \times (1 + n(x, y))
+$$
 
-- For a pixel ( I(x, y) = 150 ):  
-    ( I'(x, y) = 150 \times (1 + 0.1) = 165 )
+- For a pixel $I(x, y) = 150$:  
+    $I'(x, y) = 150 \times (1 + 0.1) = 165$
     
-- For a darker pixel ( I(x, y) = 50 ):  
-    ( I'(x, y) = 50 \times (1 + 0.1) = 55 )
+- For a darker pixel $I(x, y) = 50$:  
+    $I'(x, y) = 50 \times (1 + 0.1) = 55$
     
 
 The bright region changes _more noticeably_, showing how **speckle noise depends on intensity**.

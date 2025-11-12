@@ -1,6 +1,3 @@
-# **Linear vs Nonlinear Filters in Image Processing**
-
----
 
 ## **1. Purpose**
 
@@ -18,10 +15,10 @@ The key distinction is **how** the new pixel value is computed:
 A **linear filter** satisfies:
 
 1. **Additivity:**  
-   \( F(a + b) = F(a) + F(b) \)
+   $F(a + b) = F(a) + F(b)$
 
 2. **Homogeneity:**  
-   \( F(k \cdot a) = k \cdot F(a) \)
+   $F(k \cdot a) = k \cdot F(a)$
 
 That means the filter’s output is directly proportional to its input — it behaves like a linear system.
 
@@ -29,11 +26,11 @@ That means the filter’s output is directly proportional to its input — it be
 
 ### **2.1 Mathematical Form**
 
-For an image \(I(x, y)\) and a kernel \(h(i, j)\):
+For an image $I(x, y)$ and a kernel $h(i, j)$:
 
-\[
+$$
 I'(x, y) = \sum_i \sum_j h(i, j) \cdot I(x - i, y - j)
-\]
+$$
 
 This is a **convolution** operation.
 
@@ -43,30 +40,30 @@ This is a **convolution** operation.
 
 The 3×3 mean filter averages the 9 neighboring pixels:
 
-\[
+$$
 h(i,j) = \frac{1}{9}
 \begin{bmatrix}
 1 & 1 & 1 \\
 1 & 1 & 1 \\
 1 & 1 & 1
 \end{bmatrix}
-\]
+$$
 
 Let’s apply it to the neighborhood:
 
-\[
+$$
 \begin{bmatrix}
 20 & 22 & 23 \\
 19 & 255 & 24 \\
 18 & 21 & 20
 \end{bmatrix}
-\]
+$$
 
 Compute the mean:
 
-\[
+$$
 \text{Mean} = \frac{20 + 22 + 23 + 19 + 255 + 24 + 18 + 21 + 20}{9} = 46.89
-\]
+$$
 
 So, the new center pixel becomes **46.89**.
 
@@ -91,25 +88,25 @@ It uses nonlinear logic (e.g., sorting, thresholding, or min/max operations) to 
 
 For the same 3×3 patch:
 
-\[
+$$
 \begin{bmatrix}
 20 & 22 & 23 \\
 19 & 255 & 24 \\
 18 & 21 & 20
 \end{bmatrix}
-\]
+$$
 
 Flatten the neighborhood:
 
-\[
+$$
 [20, 22, 23, 19, 255, 24, 18, 21, 20]
-\]
+$$
 
 Sort them:
 
-\[
+$$
 [18, 19, 20, 20, 21, 22, 23, 24, 255]
-\]
+$$
 
 The **median** (middle value) is **21**.
 
