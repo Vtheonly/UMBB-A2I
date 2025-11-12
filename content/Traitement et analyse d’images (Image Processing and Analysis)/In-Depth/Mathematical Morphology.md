@@ -1,6 +1,3 @@
-# In-Depth: Foundations of Mathematical Morphology
-
-This note details the principles of Mathematical Morphology, a theory and technique for the analysis and processing of geometrical structures, based on set theory. It is used for tasks like noise removal, object separation, and finding skeletons.
 
 ## Core Concept
 

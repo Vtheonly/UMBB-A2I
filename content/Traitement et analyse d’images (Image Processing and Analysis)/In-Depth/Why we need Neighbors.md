@@ -1,10 +1,3 @@
-
-## **Connectivity and Neighbors in Digital Images**
-
----
-
-### **Clarifying the Question**
-
 We want to understand:
 
 1. Why we need to define _neighbors_ in digital images.
@@ -38,12 +31,12 @@ Let $P(x, y)$ be a pixel.
 
 ---
 
-#### **1. 4-Connectivity $N_4(P)$ **
+#### **1. 4-Connectivity $N_4(P)$**
 
 The **4-neighbors** of ( P ) are its immediate **horizontal and vertical** neighbors:
 
 $$  
-N_4(P) = {(x+1, y), (x-1, y), (x, y+1), (x, y-1)}  
+N_4(P) = \{(x+1, y), (x-1, y), (x, y+1), (x, y-1)\}  
 $$
 
 That means each pixel is connected only to the ones directly above, below, left, or right.
@@ -66,12 +59,12 @@ $$
 
 ---
 
-#### **2. 8-Connectivity $N_8(P)$ **
+#### **2. 8-Connectivity $N_8(P)$**
 
 The **8-neighbors** of ( P ) include both the 4 direct neighbors **and** the 4 diagonal ones:
 
 $$  
-N_8(P) = {(x+i, y+j) \mid i, j \in {-1, 0, 1}, (i, j) \neq (0,0)}  
+N_8(P) = \{(x+i, y+j) \mid i, j \in \{-1, 0, 1\}, (i, j) \neq (0,0)\}  
 $$
 
 **Visual (conceptual):**
@@ -135,6 +128,46 @@ $$
         
     - The algorithm detects **1 connected component**.
         
+
+---
+
+### **Visualizing the Detection**
+
+The following matrix shows each `1` **boxed** — imagine the algorithm drawing a rectangle around each detected component:
+
+#### **Under 4-Connectivity (7 objects detected)**
+
+$$
+\begin{bmatrix}
+0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & \boxed{1} & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & \boxed{1} & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & \boxed{1} & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & \boxed{1} & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & \boxed{1} & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & \boxed{1} \\
+\end{bmatrix}
+$$
+
+Each `1` is an isolated object — no pixel shares a direct (up, down, left, right) connection.
+
+---
+
+#### **Under 8-Connectivity (1 object detected)**
+
+$$
+\begin{bmatrix}
+0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+0 & \boxed{1} & 0 & 0 & 0 & 0 & 0 \\
+0 & 0 & \boxed{1} & 0 & 0 & 0 & 0 \\
+0 & 0 & 0 & \boxed{1} & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 & \boxed{1} & 0 & 0 \\
+0 & 0 & 0 & 0 & 0 & \boxed{1} & 0 \\
+0 & 0 & 0 & 0 & 0 & 0 & \boxed{1} \\
+\end{bmatrix}
+$$
+
+Here, the entire diagonal is treated as **one connected component** — the boxes represent a **single detected region** rather than 7 isolated ones.
 
 ---
 
