@@ -186,6 +186,7 @@ C'est un bruit statistique aléatoire où les valeurs suivent une distribution n
 - **Formule :** $$IB(x,y) = IP(x,y) + n(x,y)$$
 - **Distribution de $n(x,y)$ :**
   $$P(g) = \frac{1}{\sqrt{2\pi}\sigma} e^{-\frac{(g-\mu)^2}{2\sigma^2}}$$
+
 #BruitGaussien #BruitPoivreEtSel
 
 ![[5.jpg]] 
