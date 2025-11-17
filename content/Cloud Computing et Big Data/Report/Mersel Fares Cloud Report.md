@@ -101,4 +101,4 @@ OCR and data verification are specialized, heavy computations. They need a power
 PAAS layer is all about ux. It needs to be fast and handle many users at once without slowing down. The PaaS takes care of this automatically. The user feels like they are interacting with a quick, modern website
 
 
-![[Pasted image 20251022232036.png]]
+![[Digram.png]]
