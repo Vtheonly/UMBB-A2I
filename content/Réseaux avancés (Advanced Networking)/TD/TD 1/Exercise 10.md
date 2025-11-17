@@ -76,7 +76,3 @@ We will analyze the provided hexadecimal data byte by byte.
 8.  **Destination IP Address (16th to 19th bytes: `c0 a8 00 05`)**
     - `c0`=192, `a8`=168, `00`=0, `05`=5.
     - Destination IP: **`192.168.0.5`**
-
----
-
-## _(Continuing for all other exercises...)_
