@@ -39,6 +39,8 @@ Switch# configure terminal
 Switch(config)# 
 ```
 
+`cisco config t` (or `configure terminal`) is the command to enter **Global Configuration Mode**
+
 ### 2. Hostname
 Give the device a unique identity.
 ```cisco

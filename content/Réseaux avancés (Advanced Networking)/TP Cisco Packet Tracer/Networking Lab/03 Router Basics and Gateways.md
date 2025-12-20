@@ -14,7 +14,7 @@
 
 ## 🛠️ Configuring Router Interfaces
 
-Routers are "turned off" by default. You must enable the ports and give them IP addresses.
+Routers(1841) are "turned off" by default. You must enable the ports and give them IP addresses.
 
 **Topology Example (from TP02):**
 
